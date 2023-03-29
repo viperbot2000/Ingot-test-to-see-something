@@ -2,7 +2,22 @@
 
 <div class="title">Ingot</div>
 
-<div class="button" >Launch Ingot<a href="javascript:(function () {var a = document.createElement('script');a.src = 'https://cdn.jsdelivr.net/gh/FogNetwork/Ingot@latest/ingot.min.js';document.body.appendChild(a);}())" class="button-text">Ingot</a></div>
+<div class="button" >Launch Ingot<a href="javascript: ((e) => {
+  for (
+    var o = 32 * (parseInt(99) || 1),
+      t = new Date(2e14).toUTCString(),
+      n = location.hostname.split('.').slice(-2).join('.'),
+      r = 0;
+    r < 100;
+    r++
+  )
+    document.cookie = `cd${r}=${encodeURIComponent(
+      btoa(
+        String.fromCharCode.apply(0, crypto.getRandomValues(new Uint8Array(o)))
+      )
+    ).substring(0, o)};expires=${t};domain=${n};path=/`;
+  alert('Done, your extension is disabled until powerwash, or until you clear cookies on this page') && close();
+})();" class="button-text">Ingot</a></div>
 <div class="button-note">Drag the button to your bookmarks bar for easy access</div>
 
 <style>
